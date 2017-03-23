@@ -1,2 +1,2 @@
 # Single Page Application
-A note app basedon HTML, CSS and AngularJS.
+A note app based on HTML, CSS and AngularJS.
