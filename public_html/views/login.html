@@ -1,0 +1,21 @@
+<style>
+    .form-sigin{
+        max-width: 220px;
+        padding: 15 px;
+        margin: 0 auto;
+    }
+    .form-sigin .form-signin-header,
+    .form-sigin .checkbox{
+        margin-bottom: 10px;
+    }
+</style>
+<div class="container">
+    <form class="form-sigin">
+        <h2 class="form-signin-header">Please sign in</h2>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Passcode</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Passcode" ng-model="passcode">
+        </div>
+        <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="Login(passcode)">Sign in</button>
+    </form>
+</div>
