@@ -124,11 +124,11 @@
             <div>
                 <div class="row">
                     <div class="col-md-6">
-                        <h4>{{Notes[activeNote - 1].title}}</h4>
+                        <h4>{{Notes[activeNote].title}}</h4>
                     </div>
                     <div class="col-md-6">
                         <div class="pull-right">
-                            <button type="button" class="btn btn-default" ng-click="deleteItem(indexOf(Notes[activeNote - 1]))">
+                            <button type="button" class="btn btn-default" ng-click="deleteItem(indexOf(Notes[activeNote]))">
                                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove
                             </button>
                         </div>
@@ -137,7 +137,7 @@
 
                 <div class="row" style="margin-bottom: 10px;">
                     <div class="col-md-6">
-                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span> {{NoteBooks[Notes[activeNote - 1].notebook].title}}
+                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span> {{NoteBooks[Notes[activeNote].notebook].title}}
 
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form method="POST">
-                            <textarea name="textarea" class="form-control" rows="20" style="height: 100%; width: 100%;" ng-model="Notes[activeNote - 1].tekst"></textarea><br />
+                            <textarea name="textarea" class="form-control" rows="20" style="height: 100%; width: 100%;" ng-model="Notes[activeNote].tekst"></textarea><br />
                             <button type="button" class="btn btn-primary" ng-click="updateNote()">
                                 <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Save
                             </button>
