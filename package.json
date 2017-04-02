@@ -1,0 +1,14 @@
+{
+    "name": "SinglePage",
+    "version": "1.0.0",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "prestart": "npm install",
+        "test": "karma start test/karma.conf.js",
+        "postinstall": "bower install",
+        "start": "http-server ."
+    }
+}
