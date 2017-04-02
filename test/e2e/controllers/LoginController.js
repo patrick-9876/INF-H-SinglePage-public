@@ -6,8 +6,8 @@ escribe('E2E: Test the login page and login function.', function () {
 
     it("Should find the label with id #passcode", function () {
         // login
-        element(by.id('passcode')).sendKeys('1234');
-        element(by.id('login')).click();
+        element(by.id('InputPassKey')).sendKeys('1234');
+        element(by.id('btnLogin')).click();
         browser.sleep(1000);
 
         // Go to settings page

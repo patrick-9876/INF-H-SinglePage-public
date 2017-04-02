@@ -6,8 +6,8 @@ escribe('E2E: Test the settings page and login function.', function () {
 
     it("Should find the label with id #passcode", function () {
         // login
-        element(by.id('passcode')).sendKeys('1234');
-        element(by.id('login')).click();
+        element(by.id('InputPassKey')).sendKeys('1234');
+        element(by.id('btnLogin')).click();
         browser.sleep(1000);
 
         // Go to settings page
@@ -16,19 +16,19 @@ escribe('E2E: Test the settings page and login function.', function () {
 
         //Set the new passcode
         element(by.id('inputPassword')).sendKeys('5678');
-        element(by.id('savePasskey')).click();
+        element(by.id('btnSavePassKey')).click();
         browser.sleep(1000);
 
 
         //Check the login with new passcode
         browser.get('http://localhost:8080/#/login');
         browser.sleep(1000);
-        
+
         // login with new passcode
-        element(by.id('passcode')).sendKeys('5678');
-        element(by.id('login')).click();
+        element(by.id('InputPassKey')).sendKeys('5678');
+        element(by.id('btnLogin')).click();
         browser.sleep(1000);
-        
+
         // Go to settings page
         browser.get('http://localhost:8080/#/settings');
         browser.sleep(1000);
