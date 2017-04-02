@@ -22,7 +22,6 @@ module.exports = function (config) {
             '../public_html/services/*.js',
             '../public_html/*.js',
             
-            'specs/**/*.js',
             'specs/*.js'
         ],
         
