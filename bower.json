@@ -1,0 +1,23 @@
+{
+    "name": "SinglePage",
+    "version": "1.0.0",
+    "main": "index.js",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "^1.4.8",
+        "angular-mocks": "^1.4.8",
+        "angular-route": "^1.4.8",
+        "angular-cookies": "^1.4.8",
+        "bootstrap": "^3.3.7",
+        "jquery": "^3.1.1"
+    },
+    "devDependencies": {
+    }
+}
