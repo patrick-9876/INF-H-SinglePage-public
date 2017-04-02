@@ -37,7 +37,7 @@ app.controller("NoteController", function ($scope, $cookies, $location, Notebook
     };
 
     $scope.updateNote = function () {
-        NoteFactory.createNote($scope.Notes);
+        NoteFactory.saveNotes($scope.Notes);
         $scope.Notes = NoteFactory.getNotesByUser(userID);
     };
 });
