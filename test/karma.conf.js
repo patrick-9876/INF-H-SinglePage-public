@@ -14,7 +14,7 @@ module.exports = function (config) {
             '../bower_components/bootstrap/dist/js/bootstrap.js',
             '../bower_components/angular-cookies/angular-cookies.js',
             '../bower_components/angular-route/angular-route.js',
-            '../bower_components/angular-mock/angular-mock.js',
+            '../bower_components/angular-mocks/angular-mocks.js',
             
             '../public_html/controllers/*.js',
             '../public_html/factories/*.js',
