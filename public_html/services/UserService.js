@@ -4,7 +4,7 @@ app.service('UserService', function () {
         var Users = localItems;
     } else {
         var Users = [
-            {id: 1, Name: "Demo", Passcode: "0000"}
+            {id: 1, Name: "Demo", Passcode: "1234"}
         ];
         localStorage.setItem("users", angular.toJson(Users));
     }
