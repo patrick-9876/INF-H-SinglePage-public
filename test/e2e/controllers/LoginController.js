@@ -1,4 +1,4 @@
-sescribe('E2E: Test the login page and login function.', function () {
+describe('E2E: Test the login page and login function.', function () {
 
     beforeEach(function () {
         browser.get('http://localhost:8080/#/login');
