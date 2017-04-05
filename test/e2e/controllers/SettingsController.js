@@ -1,37 +1,38 @@
-escribe('E2E: Test the settings page and login function.', function () {
+describe('E2E: Test the settings page and login function.', function () {
 
     beforeEach(function () {
+        browser.manage().deleteAllCookies();
         browser.get('http://localhost:8080/#/login');
     })
 
     it("Should find the label with id #passcode", function () {
         // login
-        element(by.id('InputPassKey')).sendKeys('1234');
+        element(by.model('pascode')).sendKeys(1234);
         element(by.id('btnLogin')).click();
-        browser.sleep(1000);
+        //browser.sleep(1000);
 
         // Go to settings page
         browser.get('http://localhost:8080/#/settings');
-        browser.sleep(1000);
+        //browser.sleep(1000);
 
         //Set the new passcode
-        element(by.id('inputPassword')).sendKeys('5678');
+        element(by.id('inputPassword')).sendKeys(5678);
         element(by.id('btnSavePassKey')).click();
-        browser.sleep(1000);
+        //browser.sleep(1000);
 
-
+        browser.manage().deleteAllCookies();
         //Check the login with new passcode
         browser.get('http://localhost:8080/#/login');
-        browser.sleep(1000);
+        //browser.sleep(1000);
 
         // login with new passcode
-        element(by.id('InputPassKey')).sendKeys('5678');
+        element(by.model('passcode')).sendKeys(12345678);
         element(by.id('btnLogin')).click();
-        browser.sleep(1000);
+        //browser.sleep(1000);
 
         // Go to settings page
         browser.get('http://localhost:8080/#/settings');
-        browser.sleep(1000);
+        //browser.sleep(1000);
 
         //Should get the h1 Change passcode
         var h1 = element(by.tagName('h1'));

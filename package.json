@@ -9,6 +9,6 @@
         "prestart": "npm install",
         "test": "karma start test/karma.conf.js",
         "postinstall": "bower install",
-        "start": "http-server ."
+        "start": "http-server ./public_html/"
     }
 }

@@ -1,4 +1,4 @@
-escribe('E2E: Test the login page and login function.', function () {
+sescribe('E2E: Test the login page and login function.', function () {
 
     beforeEach(function () {
         browser.get('http://localhost:8080/#/login');
@@ -6,13 +6,13 @@ escribe('E2E: Test the login page and login function.', function () {
 
     it("Should find the label with id #passcode", function () {
         // login
-        element(by.id('InputPassKey')).sendKeys('1234');
+        element(by.id('passcode')).sendKeys(1234);
         element(by.id('btnLogin')).click();
-        browser.sleep(1000);
+        //browser.sleep(1000);
 
         // Go to settings page
         browser.get('http://localhost:8080/#/settings');
-        browser.sleep(1000);
+        //browser.sleep(1000);
 
         //Should get the h1 Change passcode
         var h1 = element(by.tagName('h1'));

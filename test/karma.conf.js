@@ -1,20 +1,18 @@
 module.exports = function (config) {
     config.set({
-        basePath: '',
+        basePath: './',
         
         files: [
             '../bower_components/angular/angular.js',
-            '../bower_components/jquery/dist/jquery.js',
-            '../bower_components/bootstrap/dist/js/bootstrap.js',
-            '../bower_components/angular-cookies/angular-cookies.js',
-            '../bower_components/angular-route/angular-route.js',
             '../bower_components/angular-mocks/angular-mocks.js',
+            '../bower_components/angular-route/angular-route.js',
+            '../bower_components/angular-cookies/angular-cookies.js',
             
+            '../public_html/app.js',
+            '../public_html/services/UserService.js',
             '../public_html/controllers/*.js',
             '../public_html/factories/*.js',
             '../public_html/filters/*.js',
-            '../public_html/services/*.js',
-            '../public_html/*.js',
             
             'specs/*.js'
         ],
@@ -39,7 +37,7 @@ module.exports = function (config) {
         ],
         
         browsers: [
-            'chrome'
+            'Chrome'
         ],
     });
 };

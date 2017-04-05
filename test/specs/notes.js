@@ -3,24 +3,28 @@
 'use strict';
 
 describe('test for testing', function () {
-    var UserService, NotebookFactory, NoteFactory;
+    var UserService;
+    var NotebookFactory;
+    var NoteFactory;
 
     beforeEach(function () {
         module('Note-App');
         inject(function (_UserService_, _NotebookFactory_, _NoteFactory_) {
-            UserService = _UserService_
-            NotebookFactory = _NotebookFactory_
-            NoteFactory = _NoteFactory_
+            UserService = _UserService_;
+            NotebookFactory = _NotebookFactory_;
+            NoteFactory = _NoteFactory_;
         });
+        NotebookFactory.setDefaultNotebooks();
+        NoteFactory.setDefaultNotes();
     });
     it('succesful login', function () {
-        expect(UserService.Login(1234)).toBeTruthy();
+        expect(UserService.Login('1234')).toBeTruthy();
     });
     it('Faild login', function () {
-        expect(UserService.Login(5678)).toBeFalsy();
+        expect(UserService.Login('5678')).toBeFalsy();
     });
     it('should return userID', function () {
-        expect(UserService.GetUserId(1234)).toBe(1);
+        expect(UserService.GetUserId('1234')).toBe(1);
     });
     it('Should get all notebooks', function () {
         var mockNotebooks = [
@@ -34,7 +38,7 @@ describe('test for testing', function () {
         }
     });
     it('Should create a new notebook', function () {
-        NotebookFactory.createNotebook('test', 1);
+        NotebookFactory.createNotebook('test', '1');
         expect(NotebookFactory.getAllNotebooks().length).toBe(4);
     });
     it('Should get all notes', function () {

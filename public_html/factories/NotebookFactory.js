@@ -3,13 +3,17 @@ app.factory('NotebookFactory', function () {
     if (localItems != undefined && localItems.length > 0) {
         var Notebooks = localItems;
     } else {
-        var Notebooks = [
+        setDefaultNotebooks();
+    }
+
+function setDefaultNotebooks(){
+    var Notebooks = [
             {id: 0, title: "All Notes", user: 1},
             {id: 1, title: "travel", user: 1},
             {id: 2, title: "work", user: 1}
         ];
         localStorage.setItem("Notebooks", JSON.stringify(Notebooks));
-    }
+}
 
     function getAllNotebooks() {
         return Notebooks;
@@ -32,6 +36,7 @@ app.factory('NotebookFactory', function () {
     }
 
     return {
+        setDefaultNotebooks: setDefaultNotebooks,
         getAllNotebooks: getAllNotebooks,
         getNotebooksByUser: getNotebooksByUser,
         createNotebook: createNotebook

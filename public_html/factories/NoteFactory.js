@@ -3,12 +3,15 @@ app.factory('NoteFactory', function () {
     if (localItems != undefined && localItems.length > 0) {
         var Notes = localItems;
     } else {
+        setDefaultNotes();
+    }
+
+    function setDefaultNotes(){
         var Notes = [
             {id: 0, title: "Note 1", tekst: "", notebook: 1, user: 1},
             {id: 1, title: "Note 2", tekst: "", notebook: 1, user: 1},
             {id: 2, title: "Note 3", tekst: "", notebook: 2, user: 1},
-            {id: 3, title: "Note 4", tekst: "", notebook: 2, user: 1},
-            {id: 4, title: "Note 5", tekst: "", notebook: 1, user: 1}
+            {id: 3, title: "Note 4", tekst: "", notebook: 2, user: 1}
         ];
         localStorage.setItem("Notes", angular.toJson(Notes));
     }
@@ -38,6 +41,7 @@ app.factory('NoteFactory', function () {
     }
 
     return {
+        setDefaultNotes: setDefaultNotes,
         getAllNotes: getAllNotes,
         getNotesByUser: getNotesByUser,
         createNote: createNote,
