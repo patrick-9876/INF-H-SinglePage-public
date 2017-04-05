@@ -6,7 +6,7 @@ describe('test for testing', function () {
     var UserService, NotebookFactory, NoteFactory;
 
     beforeEach(function () {
-        module('scrumboard-app');
+        module('Note-App');
         inject(function (_UserService_, _NotebookFactory_, _NoteFactory_) {
             UserService = _UserService_
             NotebookFactory = _NotebookFactory_
