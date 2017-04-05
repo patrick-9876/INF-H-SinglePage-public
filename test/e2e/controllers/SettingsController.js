@@ -7,7 +7,7 @@ describe('E2E: Test the settings page and login function.', function () {
 
     it("Should find the label with id #passcode", function () {
         // login
-        element(by.model('pascode')).sendKeys(1234);
+        element(by.model('passcode')).sendKeys(1234);
         element(by.id('btnLogin')).click();
         //browser.sleep(1000);
 
