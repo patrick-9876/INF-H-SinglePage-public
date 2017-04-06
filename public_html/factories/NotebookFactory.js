@@ -1,4 +1,5 @@
 app.factory('NotebookFactory', function () {
+    var Notebooks;
     var localItems = JSON.parse(localStorage.getItem("Notebooks"));
     if (localItems != undefined && localItems.length > 0) {
         var Notebooks = localItems;
